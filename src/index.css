@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-slate-700;
+  }
+
+  body {
+    @apply bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100;
+    @apply min-h-screen antialiased;
+    @apply transition-colors duration-300;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply h-2 w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-slate-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-gray-400 dark:bg-slate-600;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-slate-500;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-slate-900;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-blue-500 text-white;
+  }
+}
+
+@layer utilities {
+  /* Skip to main content link (accessibility) */
+  .skip-link {
+    @apply absolute -top-full left-0 z-[9999] bg-blue-600 px-4 py-2 text-white transition-all;
+  }
+
+  .skip-link:focus {
+    @apply top-0;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Container utilities */
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Glass effect */
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-lg dark:bg-slate-900/80;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  /* Card shadow */
+  .card-shadow {
+    @apply shadow-lg transition-shadow duration-300 hover:shadow-xl;
+  }
+
+  /* Disable transitions on theme change to prevent flashing */
+  .theme-transition-disable * {
+    transition: none !important;
+  }
+}
