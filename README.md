@@ -284,3 +284,9 @@ Built with ❤️ as a demonstration of modern e-commerce UI/UX principles.
 ---
 
 **Note**: This is a frontend-only demonstration. No actual purchases are processed, and no backend services are connected. All data is stored locally in the browser.
+
+---
+
+## Copyright
+
+Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
