@@ -267,10 +267,6 @@ The app uses hash-based routing, making it compatible with static hosting servic
 - Payment processing
 - Real authentication
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 👨‍💻 Author
 
 Built with ❤️ as a demonstration of modern e-commerce UI/UX principles.
